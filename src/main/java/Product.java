@@ -12,9 +12,12 @@ class Product {
     }
 
     void printProductInfo() {
-        System.out.printf("Produkt: %s%nCena: %.2f zł%nOpis: %s%nKategoria zakupowa: %s - %s%n%n", name, price,
-                description, category.name, category.descrtiption);
-
+        if (category != null) {
+            System.out.printf("Produkt: %s%nCena: %.2f zł%nOpis: %s%nKategoria zakupowa: %s - %s%n%n", name, price,
+                    description, category.name, category.descrtiption);
+        } else {
+            System.out.printf("Produkt: %s%nCena: %.2f zł%nOpis: %s%n%n", name, price, description);
+        }
     }
 
 }
